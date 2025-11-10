@@ -482,7 +482,7 @@ RUN wget -O golang-go.deb 'https://packages.trafficmanager.net/public/fips/bulls
  && rm golang-go.deb golang-src.deb
 {%- endif %}
 
-RUN pip3 install --upgrade pip
+RUN pip3 install --upgrade 'pip<22'
 RUN apt-get purge -y python3-pip python3-yaml
 
 # For building Python packages
